@@ -1,9 +1,5 @@
 # Arithmatic API Golang [![Go Report Card](https://goreportcard.com/badge/github.com/Brettm12345/arithmatic)](https://goreportcard.com/report/github.com/Brettm12345/arithmatic)
-A simple arithmatic API with cache support written in Golang with support for 
-* Addition
-* Subtraction
-* Multiplication
-* Division
+A simple arithmatic API with cache support written in Golang
 
 ## Building/Running
 
