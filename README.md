@@ -1,15 +1,20 @@
 # Arithmatic API Golang [![Go Report Card](https://goreportcard.com/badge/github.com/Brettm12345/arithmatic)](https://goreportcard.com/report/github.com/Brettm12345/arithmatic)
 A simple arithmatic API with cache support written in Golang
 
-## Building/Running
+## Building
 
 ``` console
-$ go get github.com/Brettm12345/arithmatic
-$ arithmatic
+$ go get -u github.com/Brettm12345/arithmatic
 ```
 
 ## Usage
 I use [httpie](httpie) for the following examples 
+
+## Starting the server
+
+``` console
+$ arithmatic
+```
 
 ### Addition
 ``` console
