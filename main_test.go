@@ -8,8 +8,9 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+var router = setupRouter()
+
 func TestAddRoute(t *testing.T) {
-	router := setupRouter()
 	w := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "/add?x=5&y=4", nil)
 	router.ServeHTTP(w, req)
@@ -19,7 +20,6 @@ func TestAddRoute(t *testing.T) {
 }
 
 func TestSubtractRoute(t *testing.T) {
-	router := setupRouter()
 	w := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "/subtract?x=5&y=4", nil)
 	router.ServeHTTP(w, req)
@@ -29,7 +29,6 @@ func TestSubtractRoute(t *testing.T) {
 }
 
 func TestMultiplyRoute(t *testing.T) {
-	router := setupRouter()
 	w := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "/multiply?x=5&y=4", nil)
 	router.ServeHTTP(w, req)
@@ -39,7 +38,6 @@ func TestMultiplyRoute(t *testing.T) {
 }
 
 func TestDivideRoute(t *testing.T) {
-	router := setupRouter()
 	w := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "/divide?x=20&y=4", nil)
 	router.ServeHTTP(w, req)
@@ -49,7 +47,6 @@ func TestDivideRoute(t *testing.T) {
 }
 
 func TestCache(t *testing.T) {
-	router := setupRouter()
 	w := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "/divide?x=20&y=4", nil)
 	router.ServeHTTP(w, req)
