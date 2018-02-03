@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"strconv"
 	"time"
 
@@ -21,22 +20,18 @@ var response Response
 
 var ca = cache.New(time.Minute, 2*time.Minute)
 
-func main() {
-	router := gin.Default()
+func setupRouter() *gin.Engine {
+	r := gin.Default()
 
-	router.GET("/:action", func(c *gin.Context) {
+	r.GET("/:action", func(c *gin.Context) {
 		if data, cached := ca.Get(c.Request.URL.String()); cached {
 			response := data.(*Response)
 			response.Cached = true
 		} else {
-			x, errX := strconv.Atoi(c.Query("x"))
-			y, errY := strconv.Atoi(c.Query("y"))
-			if errX != nil || errY != nil {
-				log.Fatal(errX, errY)
-			} else {
-				response.X = x
-				response.Y = y
-			}
+			x, _ := strconv.Atoi(c.Query("x"))
+			y, _ := strconv.Atoi(c.Query("y"))
+			response.X = x
+			response.Y = y
 			switch c.Param("action") {
 			case "add":
 				response.Answer = (x + y)
@@ -53,5 +48,10 @@ func main() {
 		}
 		c.JSON(200, response)
 	})
-	router.Run(":8080")
+	return r
+}
+
+func main() {
+	r := setupRouter()
+	r.Run(":8080")
 }
