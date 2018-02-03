@@ -10,7 +10,7 @@ $ go get -u github.com/Brettm12345/arithmatic
 ## Usage
 I use [httpie](httpie) for the following examples 
 
-## Starting the server
+### Starting the server
 
 ``` console
 $ arithmatic
