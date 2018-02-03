@@ -1,4 +1,5 @@
-# Arithmatic API Golang [![Go Report Card](https://goreportcard.com/badge/github.com/Brettm12345/arithmatic)](https://goreportcard.com/report/github.com/Brettm12345/arithmatic)
+# Arithmatic API Golang [![Go Report
+Card](https://goreportcard.com/badge/github.com/Brettm12345/arithmatic)](https://goreportcard.com/report/github.com/Brettm12345/arithmatic) [![Coverage Status](https://coveralls.io/repos/github/Brettm12345/arithmatic/badge.svg?branch=master)](https://coveralls.io/github/Brettm12345/arithmatic?branch=master)
 A simple arithmatic API with cache support written in Golang
 
 ## Building
