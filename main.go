@@ -8,6 +8,7 @@ import (
 	"github.com/robfig/go-cache"
 )
 
+// Response is the default response data from the server
 type Response struct {
 	Action string
 	X      int
